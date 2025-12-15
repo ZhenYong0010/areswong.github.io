@@ -1,0 +1,91 @@
+/* 全局重置：不要在 * 上使用 border，会影响所有元素 */
+*{
+    margin: 0;
+    padding: 0;
+    /*border: 1px solid white;*/
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #000000;
+    font-family: 'Courier New', Courier, monospace;
+    color: white;
+}
+
+h1{
+    color: white;
+    text-align: center;
+    margin: 10px auto 5px auto;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+div{
+    color: white;
+    padding: 10px;
+    margin: 20px auto;
+    font-size: 16px;
+    background-color: #1A1A1A;
+    width: 90%;
+    display: block;
+}
+
+div p{
+    margin: 8px 0;
+}
+
+h2{
+    text-align: center;
+}
+
+footer{
+    text-align: center;
+    color: white;
+    margin: 20px auto;
+    font-size: 14px;
+}
+
+.navigation {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin: 10px auto;
+}
+
+a {
+    color: white;
+    text-decoration: none;
+    display: inline-block;
+    padding: 6px 8px;
+}
+
+a:hover {
+    color: white;
+    text-decoration: underline;
+}
+
+a.active {
+    font-weight: bold;
+    color:white;
+}
+
+.profile-pic {
+    float: right;
+    width: 120px;
+    height: 140px;
+    margin-right: 1%;
+    border-radius: 4px;
+    object-fit: cover;
+}
+
+h3{
+    margin-left: 20px;
+    margin-bottom: 10px;
+}
+
+ul li{
+    margin-left: 20px;
+    margin-bottom: 6px;
+}
