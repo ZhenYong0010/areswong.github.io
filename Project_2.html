@@ -1,0 +1,79 @@
+<html>
+    <head lang="en">
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Solar Energy Forecasting using AI</title>
+        <link rel="stylesheet" href="styles.css">
+        <link rel="stylesheet" href="Project_1.css">
+        <script src="main.js" defer></script>
+    </head>
+
+    <body>
+        <h1>Project 2: Solar Energy Forecasting using AI</h1>
+
+        <div class="Project_Details">
+            <h2>Project Details</h2>
+            <p><strong>Problem and Motivation:</strong> Solar power is highly volatile and intermittent, challenging grid integration. Existing forecasting models struggle to capture both linear and nonlinear components of solar irradiance data efficiently.</p>
+            <p><strong>Design and Evaluation:</strong> Design and evaluate a hybrid forecasting model integrating Statistical Learning (SL) and Deep Learning (DL) techniques, using ALLSKY_KT (Clearness Index) for robust prediction.</p>
+            <p><strong>Methodology:</strong> Apply ARIMA/SARIMA to extract linear patterns, then feed residual errors to LSTM/RNN for nonlinear prediction. Evaluate using RMSE, MAE, and R² metrics on NASA DAVe dataset.</p>
+            <p><strong>Key Findings:</strong>The hybrid model consistently outperformed single-component models across all performance metrics, confirming the effectiveness of combining linear and nonlinear techniques.</p>
+            <p><strong>Conclusion and Impact:</strong>The hybrid model provides superior solar energy forecasting accuracy, contributing to smart grid technology, better energy scheduling, and enhanced grid stability.</p>
+        </div>
+
+        <div class="Methodology">
+            <h2>Technologies Used:</h2>
+            <ul>
+                <li>Python: Using Jupyter Notebook to console.</li>
+                <li>Machine Learning Libraries (e.g., TensorFlow, Scikit-learn)</li>
+                <li>Data Analysis Tools (e.g., Pandas, NumPy)</li>
+                <li>Visualization Libraries (e.g., Matplotlib, Seaborn)</li>
+                <li>Historical Weather Data Sources (e.g., NOAA, NASA)</li>
+            </ul>
+        </div>
+
+        <div class="Key_Features">
+            <h2>Key Features:</h2>
+            <ul>
+                <li><input type="button" onclick="scrollToAndShow('Data Collection')" value="Data Collection and Integration"></li>
+                <li><input type="button" onclick="scrollToAndShow('Data Prepare & Clean')" value="Data Preprocessing and Cleaning"></li>
+                <li><input type="button" onclick="scrollToAndShow('Model Training and Evaluation')" value="Model Training and Evaluation"></li>
+                <li><input type="button" onclick="scrollToAndShow('Results')" value="Visualization of Forecast Results"></li>
+            </ul>
+        </div>
+
+        <div class="Data_Collection hidden" id="Data Collection">
+            <h2>Data Collection and Integration</h2>
+            <p>Data Collection and Integration involved sourcing high-quality, time-series meteorological data from the NASA POWER database. The core variable for prediction was the ALLSKY_KT (Clearness Index), chosen for its standardization properties that enhance model robustness. Pre-processing included essential steps like feature selection, handling missing values, and normalization/scaling of input features to prepare the dataset for the hybrid modeling process. Finally, the data was systematically partitioned into training, validation, and test sets to facilitate rigorous model development and unbiased performance evaluation.</p>
+        </div>
+
+        <div class="Data_Prepare_Clean hidden" id="Data Prepare & Clean">
+            <h2>Data Preprocessing and Cleaning</h2>
+            <p>Data Preprocessing and Cleaning was critical for preparing the time-series meteorological data for the hybrid models. The process included rigorous missing value handling and feature selection of relevant variables (focusing on the ALLSKY_KT index). Crucially, all input features were subjected to normalization/scaling to optimize the training of the Deep Learning components (LSTM/RNN). Finally, the clean data was formatted into sequence-based inputs and partitioned sequentially into training, validation, and test sets for reliable model development and performance evaluation.</p>
+        </div>
+
+        <div class="Model_Training_Evaluation hidden" id="Model Training and Evaluation">
+            <h2>Model Training and Evaluation</h2>
+            <p>Model Training and Evaluation focused on implementing a two-stage hybrid modeling strategy. The initial stage utilized ARIMA/SARIMA to capture linear patterns, whose residuals were then fed into a Deep Learning model (LSTM/RNN) to predict the nonlinear components. The final forecast was the summation of these two predictions. Training involved optimizing the DL component using the Adam optimizer and MSE loss function. All models (hybrid and baseline single models) were rigorously evaluated on the held-out test set using critical metrics including RMSE, MAE, and R². The conclusive finding was that the Hybrid Model consistently demonstrated superior predictive accuracy compared to its standalone counterparts.</p>
+        </div>
+
+        <div class="Results hidden" id="Results">
+            <h2>Visualization of Forecast Results</h2>
+            <p>Visualization of Forecast Results was crucial for demonstrating the model's superiority. This involved plotting the forecast time-series of the hybrid model against the actual ALLSKY_KT values to visually confirm the close fit. Furthermore, residual plots were used to analyze prediction errors, and bar charts comparing key metrics (RMSE, MAE, R²) across all tested models (Hybrid, ARIMA, LSTM/RNN) provided the quantitative evidence. The visualizations collectively confirmed that the Hybrid Model consistently yielded the lowest error and highest fitness, strongly supporting the project's conclusion.</p>
+        </div>
+
+        <div class="Conclusion">
+            <h2>Conclusion</h2>
+            <p>This project successfully developed and evaluated a hybrid forecasting model combining Statistical Learning (ARIMA/SARIMA) and Deep Learning (LSTM/RNN) for solar energy prediction using the ALLSKY_KT index. The results conclusively demonstrated that the Hybrid Model outperformed all single-component baseline models, yielding the lowest errors (RMSE, MAE) and highest goodness-of-fit (R²). This work significantly contributes to advancing the accuracy and reliability of solar power forecasting, which is vital for optimizing renewable energy management and enhancing grid stability. Future work should focus on incorporating more sophisticated models and larger, diverse datasets to further improve predictive performance.</p> 
+        </div>
+
+        <button onclick="window.print()">Print this page</button>
+        <button onclick="window.location.href='index.html'">Back to Home Page</button>
+    </body>
+
+    <footer>
+        <p>Copyright © 2025 Wong Zhen Yong. All rights reserved.</p>
+        <p>Email :zhenyong0010@gmail.com</p>
+        <p>Phone number : +6010-331-4314</p>
+    </footer>
+
+</html>

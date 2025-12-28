@@ -1,0 +1,81 @@
+<html>
+    <head lang="en">
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Project 1: IOT remote car</title>
+        <link rel="stylesheet" href="styles.css">
+        <link rel="stylesheet" href="Project_1.css">
+    </head>
+
+    <body>
+        <h1>Project 1: IOT remote car</h1>
+        <div class="Introduction">
+            <h2>Introduction</h2>
+            <p>This is my first IOT project that I build using ArduinoIDE and controlled by Blynk app in my mobile phone. 
+                The car can move forward, backward, left and right by controlling the button in the app. The car also equip with ultrasonic sensor to avoid obstacle in front of it. 
+                The car will stop moving when there is an obstacle detected within 10 cm.</p>
+        </div>
+
+        <div class="Works_details">
+            <h2>How it works</h2>
+            <p>The car is controlled by an Arduino UNO R3 board which is connected to an ESP8266 WiFi module. The Blynk app sends commands to the ESP8266 module via the internet, 
+                which then relays the commands to the Arduino board. The Arduino board controls the motors of the car using an L298N motor driver module. 
+                The ultrasonic sensor is used to detect obstacles in front of the car and stop it from moving if an obstacle is detected within 10 cm.</p>
+        </div>
+
+        <div class="Components_used">
+            <h2>Components used</h2>
+            <ul>
+                <li>1 unit LCD</li>
+                <li>1 unit Arduino Wi Fi Module D1 R1</li>
+                <li>2 units L298N controller</li>
+                <li>1 unit humidity sensor</li>
+                <li>1 unit distance sensor</li>
+                <li>4 units DC motor</li>
+                <li>4 units wheels</li>
+                <li>Power supply</li>
+                <li>1 units breadboard</li>
+                <li>Several jumpers wire.</li>
+                <li>2 units LED</li>
+                <li>1 units Chassis</li>
+            </ul>
+        </div>
+
+        <div class="Image_shows">
+            <h2>Video Demonstration and Circuit</h2>
+            <h3>How to use Blynk app to control the car.</h3>
+            <video controls>
+                <source src="demo video.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+
+            <h3>Figure 1: Circuit Diagram</p>
+            <a href="General Graph.jpg"><img src="General Graph.jpg" alt="Circuit Graph"></a>
+        </div>
+
+        <div class="Conclusion">
+            <h2>Conclusion</h2>
+            <p>This project was a great learning experience for me as it helped me understand the basics of IOT and how to control devices remotely using a mobile app. 
+                I also learned how to use various components such as Arduino, ESP8266, and ultrasonic sensors. 
+                Overall, I am satisfied with the outcome of this project and look forward to building more IOT projects in the future.</p>
+        </div>
+
+        <div class="References">
+            <h2>References</h2>
+            <p>Blynk App: <a href="https://blynk.io/">https://blynk.io/</a></p>
+            <p>Arduino IDE: <a href="https://www.arduino.cc/en/software">https://www.arduino.cc/en/software</a></p>
+        </div>
+
+        <button onclick="window.print()">Print this page</button>
+        <button onclick="window.location.href='index.html'">Back to Home Page</button>
+        
+    </body>
+
+    
+    <footer>
+        <p>Copyright © 2025 Wong Zhen Yong. All rights reserved.</p>
+        <p>Email :zhenyong0010@gmail.com</p>
+        <p>Phone number : +6010-331-4314</p>
+    </footer>
+
+</html>
